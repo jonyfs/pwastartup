@@ -3,7 +3,7 @@
     "short_name": "PWA Startup",
     "name": "PWA Startup Example with Material Design Lite",
     "description": "PWA Startup Example with Material Design Lite",
-    "scope": "/index.html",
+    "scope": "/",
     "icons": [{
             "src": "/assets/icons/Icon-96.png",
             "sizes": "96x96",
