@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/web-manifest",
+    "short_name": "PWA Startup",
+    "name": "PWA Startup Example with Material Design Lite",
+    "description": "PWA Startup Example with Material Design Lite",
+    "scope": "/index.html",
+    "icons": [{
+            "src": "/assets/icons/Icon-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/Icon-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#FFF",
+    "theme_color": "#009688",
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "orientation": "any"
+}
