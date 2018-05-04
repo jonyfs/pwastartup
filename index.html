@@ -2,98 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PWA Startup with Material Design Lite</title>
-
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="/assets/icons/Icon-192.png">
-
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="PWA Startup">
-    <link rel="apple-touch-icon" href="/assets/icons/Icon-512.png">
-    <link rel="apple-touch-startup-image" href="/assets/icons/Icon-512.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/Icon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/Icon-180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/assets/icons/Icon-167.png">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#2196F3">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="/assets/icons/Icon-144.png">
-    <meta name="msapplication-TileColor" content="#2196F3">
-
-    <link rel="shortcut icon" href="/assets/icons/Icon-512.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.blue-light_blue.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWAGram">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/assets/icons/Icon-180.png" sizes="180x180">
+    <meta name="msapplication-TileImage" content="/assets/icons/Icon-144.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#2196F3">
 </head>
 
 <body>
 
-    <div class="mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header mdl-layout__header--scroll">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Title</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">PWA Startup</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="/">Feed</a>
+                        <a class="mdl-navigation__link" href="/help">Help</a>
+                        <div class="drawer-option">
+                            <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+              Enable Notifications
+            </button>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">PWA Startup</span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="/">Feed</a>
+                    <a class="mdl-navigation__link" href="/help">Help</a>
+                    <div class="drawer-option">
+                        <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+            Enable Notifications
+          </button>
+                    </div>
                 </nav>
             </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Title</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <!-- Your content goes here -->
-            </div>
-        </main>
-    </div>
+            <main class="mdl-layout__content mat-typography">
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = '//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-63600269-4', 'auto');
-        ga('send', 'pageview');
-    </script>
+                <div class="page-content">
+                </div>
+                <div class="floating-button">
+                    <!--
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="share-image-button">
+          <i class="material-icons">add</i>
+        </button>-->
+                </div>
+                <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+                    <div class="mdl-snackbar__text"></div>
+                    <button type="button" class="mdl-snackbar__action"></button>
+                </div>
+            </main>
+        </div>
+    </div>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="/assets/js/analytics.js"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>

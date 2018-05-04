@@ -1,0 +1,86 @@
+var CACHE_NAME = 'pwastartp';
+var CACHE_VERSION = '1.0.6';
+
+self.oninstall = function(event) {
+
+    var urls = [
+
+        '/',
+        '/assets/css/styles.css',
+        '/assets/icons/Icon-96.png',
+        '/assets/icons/Icon-144.png',
+        '/assets/icons/Icon-192.png',
+        '/assets/icons/Icon-512.png',
+        '/manifest.json',
+
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css"
+    ];
+
+    urls = urls.map(function(url) {
+        return new Request(url, { mode: 'no-cors' });
+    });
+
+    event.waitUntil(
+        caches
+        .open(CACHE_NAME + '-v' + CACHE_VERSION)
+        .then(function(cache) {
+            return cache.addAll(urls);
+        })
+    );
+
+};
+
+self.onactivate = function(event) {
+
+    var currentCacheName = CACHE_NAME + '-v' + CACHE_VERSION;
+    caches.keys().then(function(cacheNames) {
+
+        return Promise.all(
+            cacheNames.map(function(cacheName) {
+                if (cacheName.indexOf(CACHE_NAME) == -1) {
+                    return;
+                }
+
+                if (cacheName != currentCacheName) {
+                    return caches.delete(cacheName);
+                }
+            })
+        );
+    });
+
+};
+
+self.onfetch = function(event) {
+
+    var request = event.request;
+    var url = new URL(request.url);
+    var validSubsections = [
+        'create', 'details', 'edit', ''
+    ];
+
+    var subsection = /^\/([^\/]*)/.exec(url.pathname)[1];
+
+    event.respondWith(
+
+        // Check the cache for a hit.
+        caches.match(request).then(function(response) {
+
+            // If we have a response return it.
+            if (response)
+                return response;
+
+            // Otherwise return index.html file.
+            if (validSubsections.indexOf(subsection) >= 0)
+                return caches.match('/');
+
+            // We may get requests for analytics so
+            // do a very dumb check for that.
+            if (url.host.indexOf('voice') === -1)
+                return fetch(request);
+
+            // And worst case we fire out a not found.
+            return new Response('Sorry, not found');
+        })
+    );
+};
