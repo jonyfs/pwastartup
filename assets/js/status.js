@@ -14,7 +14,7 @@ function verifyStatus() {
     if ( navigator.onLine ){
         const title = 'Badge Notification';
         const options = {
-          badge: '/assets/icons/Icon-128.png'
+          icon: '/assets/icons/Icon-128.png'
         };
         registration.showNotification(title, options);
     }
