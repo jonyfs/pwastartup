@@ -1,0 +1,25 @@
+{
+  "name": "pwastartup",
+  "version": "1.0.0",
+  "description": "er",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonyfs/pwastartup.git"
+  },
+  "keywords": [
+    "pwa"
+  ],
+  "author": "Jony Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonyfs/pwastartup/issues"
+  },
+  "homepage": "https://github.com/jonyfs/pwastartup#readme",
+  "dependencies": {
+    "npm": "^6.0.1"
+  }
+}
