@@ -1,1 +1,5 @@
 
+npm install bower --save
+bower init
+bower install i18next --save
+bower install material-design-lite --save

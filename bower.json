@@ -1,0 +1,26 @@
+{
+  "name": "pwastartup",
+  "description": "er",
+  "main": "index.html",
+  "authors": [
+    "Jony Santos"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "pwa"
+  ],
+  "homepage": "https://github.com/jonyfs/pwastartup",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "i18next": "^11.3.1",
+    "material-design-lite": "^1.3.0",
+    "material-design-icons": "^3.0.1"
+  }
+}
