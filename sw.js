@@ -23,9 +23,9 @@ self.addEventListener('install', function(event) {
         '/assets/js/analytics.js',
         '/assets/js/app.js',
         '/assets/js/status.js',
-        '/manifest.json',
+        '/manifest.json'
         //"https://fonts.googleapis.com/icon?family=Material+Icons",
-        "https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.blue-light_blue.min.css"
+        //"https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.blue-light_blue.min.css"
     ];
 
     urls = urls.map(function(url) {
