@@ -16,3 +16,16 @@ workbox.routing.registerRoute(
       ]
     })
   );
+
+  const articleHandler = workbox.strategies.networkFirst({
+    cacheName: 'pwastartup-cache',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 50,
+      })
+    ]
+  });
+  
+  workbox.routing.registerRoute(/(.*)article(.*)\.html/, args => {
+    return articleHandler.handle(args);
+  });  

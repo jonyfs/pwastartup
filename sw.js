@@ -154,6 +154,14 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "assets/js/status.js",
     "revision": "8f5c0733c79056ceb5a5189b13f7ec86"
+  },
+  {
+    "url": "pages/404.html",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "url": "pages/offline.html",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
   }
 ]);
 
@@ -169,3 +177,16 @@ workbox.routing.registerRoute(
       ]
     })
   );
+
+  const articleHandler = workbox.strategies.networkFirst({
+    cacheName: 'pwastartup-cache',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 50,
+      })
+    ]
+  });
+  
+  workbox.routing.registerRoute(/(.*)article(.*)\.html/, args => {
+    return articleHandler.handle(args);
+  });  

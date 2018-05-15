@@ -11,3 +11,5 @@ npx workbox wizard
 
 npx workbox injectManifest
 
+https://codelabs.developers.google.com/codelabs/workbox-lab
+
