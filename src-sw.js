@@ -6,4 +6,3 @@ workbox.precaching.precacheAndRoute([]);
 
 workbox.strategies.cacheFirst()
 workbox.strategies.networkFirst()
-workbox.strategies.staleWhileRevaliate()
