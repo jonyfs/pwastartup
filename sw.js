@@ -166,27 +166,15 @@ workbox.precaching.precacheAndRoute([
 ]);
 
 workbox.routing.registerRoute(
-    /(.*)articles(.*)\.(?:png|gif|jpg)/,
+    new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
     workbox.strategies.cacheFirst({
-      cacheName: 'images-cache',
+      cacheName: 'googleapis',
       plugins: [
         new workbox.expiration.Plugin({
-          maxEntries: 50,
-          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-        })
-      ]
-    })
+          maxEntries: 30,
+        }),
+      ],
+    }),
   );
 
-  const articleHandler = workbox.strategies.networkFirst({
-    cacheName: 'pwastartup-cache',
-    plugins: [
-      new workbox.expiration.Plugin({
-        maxEntries: 50,
-      })
-    ]
-  });
   
-  workbox.routing.registerRoute(/(.*)article(.*)\.html/, args => {
-    return articleHandler.handle(args);
-  });  
