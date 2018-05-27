@@ -5,7 +5,11 @@ console.log('service worker config');
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "eab11b8b5e880f8b1aa2ecd5b732f2fa"
+    "revision": "580506a1659e554525c78661d5271a3d"
+  },
+  {
+    "url": "version.json",
+    "revision": "97c56734de32e43d25bb1da20cec3cfd"
   },
   {
     "url": "assets/css/styles.css",
@@ -152,6 +156,18 @@ workbox.precaching.precacheAndRoute([
     "revision": "927e3e14517d24b2359047115a75b4f5"
   },
   {
+    "url": "assets/js/dbConfig.js",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "url": "assets/js/euroDolar.js",
+    "revision": "6078f42aba507d38ac8f41ea29736b6f"
+  },
+  {
+    "url": "assets/js/readVersion.js",
+    "revision": "7a2eb977a89e9db9a6ea584ca7ecb345"
+  },
+  {
     "url": "assets/js/status.js",
     "revision": "8f5c0733c79056ceb5a5189b13f7ec86"
   },
@@ -178,5 +194,7 @@ workbox.routing.registerRoute(
   );
 
   workbox.googleAnalytics.initialize();
+
+  
 
   

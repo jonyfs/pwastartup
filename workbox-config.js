@@ -1,13 +1,14 @@
 module.exports = {
-  "globDirectory": "./",
-  "globPatterns": [
-    "index.html",
-    "assets/**/*.{css,png,js}",
-    "pages/**/*.html"
-  ],
-  "swDest": "sw.js",
-  "swSrc": "src-sw.js",
-  "globIgnores": [
-    "workbox-config.js"
-  ]
-}; 
+    "globDirectory": "./",
+    "globPatterns": [
+        "index.html",
+        "version.json",
+        "assets/**/*.{css,png,js}",
+        "pages/**/*.html"
+    ],
+    "swSrc": "src-sw.js",
+    "swDest": "sw.js",
+    "globIgnores": [
+        "workbox-config.js"
+    ]
+};
