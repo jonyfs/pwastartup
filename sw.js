@@ -5,7 +5,7 @@ console.log('service worker config');
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "b48898dfef1abc6b77d312704b96de7f"
+    "revision": "0abd76762b85b74515ccb255d461399a"
   },
   {
     "url": "version.json",
@@ -165,7 +165,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/js/readVersion.js",
-    "revision": "2c2f40ecdbfdc381036ba1283e5c39b5"
+    "revision": "995fdbe64f35eb67f82bace3940ab3f2"
   },
   {
     "url": "assets/js/status.js",
