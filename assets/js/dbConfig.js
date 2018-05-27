@@ -7,6 +7,6 @@
         return;
     }
 
-    var dbPromise = idb.open('pwastartupdb', 1);
+    //var dbPromise = idb.open('pwastartupdb', 1);
 
 })();
