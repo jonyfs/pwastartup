@@ -5,4 +5,5 @@ bower install i18next --save
 bower install material-design-lite --save
 bower install material-design-icons --save
 
-
+npm install workbox-cli --global
+workbox wizard --injectManifest
