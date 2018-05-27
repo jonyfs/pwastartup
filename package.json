@@ -24,6 +24,6 @@
         "workbox-cli": "^3.2.0"
     },
     "scripts": {
-        "build": "node version-maker.js && workbox injectManifest workbox-config.js"
+        "build": "node version-maker.js"
     }
 }
