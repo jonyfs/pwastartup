@@ -9,7 +9,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "version.json",
-    "revision": "f0d0ec6ec1a7146f02dcf5e7938536c6"
+    "revision": "7166d0144c7fca87f1e7326b597010fe"
   },
   {
     "url": "assets/css/styles.css",
